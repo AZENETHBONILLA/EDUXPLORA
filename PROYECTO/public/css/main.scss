@@ -1,9 +1,11 @@
 //hacer variables 
 $primary-color: #42052D;
 $secondary-color: #AD2448;
-
 $terciary-color: white;
 $font-color:#94719F;
+$navy-color: #00304E;
+$turqueza: #55B4B0;
+$verde-olivo:#9B933B;
 
 $box-shadow: 0 2px 10px 0 rgba(0,0,0,0.6);
 $limit: 10;
@@ -23,6 +25,7 @@ $unit: 8px;
     color: $color;
     border-radius: 50px;
     padding: 20px 30px;
+    margin: 10px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -35,6 +38,9 @@ $unit: 8px;
 
 .btn{
     &.btn-cta{
+        width: 150px;
+        height: 60px;
+        margin-bottom: 200px;
         @include btn($secondary-color, $terciary-color, 'true');
         &:hover{
             @include btn($primary-color, $terciary-color, 'true');
@@ -48,6 +54,17 @@ $unit: 8px;
     }
 }
 
+.btn-cta__segundo{
+    width: 230px;
+    height: 60px;
+    margin-bottom: 200px;
+    @include btn($secondary-color, $terciary-color, 'true');
+    &:hover{
+        @include btn($primary-color, $terciary-color, 'true');
+        box-shadow: $box-shadow; 
+    }
+}
+
 *{
     @include reset-pm();
     box-sizing: border-box;
@@ -58,9 +75,21 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.body__usuarios{
+    background-color: $navy-color;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 a{
     color: $secondary-color;
     text-decoration: none;
+    margin: 50px 30px;
+    padding: auto 20px;
+}
+
+p{
+    font-weight: lighter;
+    font-size: size(2.3);
 }
 
 h2{
@@ -73,6 +102,16 @@ h3{
     font-size: size(4);
 }
 
+h4{
+    font-weight: lighter;
+    font-size: size(3);
+}
+
+.titulo__h3{
+    text-align: center;
+}
+
+//Contenedores de pagina
 .container{
     background-color: white;
     margin: 40px auto;
@@ -85,11 +124,91 @@ h3{
     background-size: 100% 100%;
 }
 
+.container__segundo{
+    background-color: white;
+    margin: 40px auto;
+    width: 1200px;
+    height: 1100px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    background-image: url("../../img/SECUNDARIO.png");
+    background-size: 100% 100%;
+}
+
+.container__tercero{
+    background-color: white;
+    margin: 40px auto;
+    width: 1200px;
+    height: 740px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    background-image: url("../../img/SECUNDARIO.png");
+    background-size: 100% 100%;
+}
+
+.container__cuarto{
+    background-color: white;
+    margin: 40px auto;
+    width: 1200px;
+    height: 550px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    background-image: url("../../img/SECUNDARIO.png");
+    background-size: 100% 100%;
+}
+
+.container__admin{
+    background-color: white;
+    margin: 40px auto;
+    width: 1100px;
+    height: 450px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    background-image: url("../../img/SECUNDARIO.png");
+    background-size: 100% 100%;
+}
+
+.container__login{
+    background-color: white;
+    margin: 40px auto;
+    width: 1100px;
+    height: 560px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+
+    background-image: url("../../img/LOGIN.png");
+    background-size: 100% 100%;
+}
+
+.container__header{
+    background-color: white;
+    margin: 30px auto;
+    width: 1200px;
+    height: 140px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.container__busqueda{
+    background-color: white;
+    margin: 10px auto;
+    width: 1100px;
+    height: 600px;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+
+    background-image: url("../../img/BUSQUEDA.png");
+    background-size: 100.2% 100%;
+}
+
 ul{
     @include reset-pm();
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 5px;
     li {
         text-align: right;
         a {
@@ -107,7 +226,7 @@ ul{
 }
 
 header{
-    padding: 40px;
+    padding: 10px 22px;
     nav{
         display: flex;
         align-items: center;
@@ -115,6 +234,13 @@ header{
     }
 }
 
+.header__concepto{
+    padding: 0px 30px;
+}
+
+.header__index{
+    padding: 23px 22px;
+}
 .prices{
     .prev{
         font-size: size(2);
@@ -129,8 +255,22 @@ header{
     }
 }
 
+.letras{
+    margin: 10px;
+}
+
+.letras__index{
+    margin: 40px;
+}
+
 .row{
     display: flex;
+    align-items: center;
+}
+
+.columna{
+    display: grid;
+    grid-column: auto;
     align-items: center;
 }
 
@@ -138,6 +278,328 @@ header{
     margin: 0 auto;
 }
 
+.imagen{
+    width: 830px;
+    height: 200px;
+    background-image: url("../../img/VISITAS.jpg");
+    background-size: 100% 120%;
+    margin: auto 170px;
+}
+
+.logo__texto{
+    text-align: center;
+}
+
+.logo__eduXplora{
+    margin-right: 200px;
+}
+
+.logo__contenedor{
+    display: flex;
+    grid-row: auto;
+    align-items: center;
+}
+
+
+/*FOOTHER*/
+.footer{
+    background-color: $secondary-color;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    color: $terciary-color;
+}
+.footer__texto{
+    text-align: center;
+    color: $terciary-color;
+}
+
+
+/* NOSOTROS & OBJETIVO*/
+.pregunta{
+    text-align: center;
+}
+.objetivo{
+    text-align: center;
+    margin: 20px 60px;
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+}
+
+.izquierda{
+    justify-content: right;
+}
+
+.margen{
+    margin: 0px 30px;
+}
+.nosotros__imagen{
+    width: 20%;
+    margin-left: 12rem;
+}
+
+.nosotros__contenido{
+    margin: 60px 70px;
+}
+    /* Bloques */
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; 
+    margin: 20px 70px;
+}
+.bloque{
+    align-content: center;
+    background-color: $secondary-color;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    width: 32rem;
+}
+.bloque__titulo{
+    color: $terciary-color;
+    text-align: center;
+    margin: 5px;
+
+}
+.bloque__contenido{
+    text-align: center;
+}
+
+
+
+/* CONTACTO */
+.contacto__contenido{
+    text-align: center;
+}
+
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+    font-family: var(--fuenteContenido);
+}
+.campo {
+    display: flex;
+    margin-bottom: 15px;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding: 20px 2rem;
+}
+.campo__field {
+    background-color: #e8e8e8;
+    flex: 1;
+    border: 1px solid var(--gris);
+    font-family: var(--fuenteContenido);
+}
+.campo__field--textarea {
+    height: 5rem;
+}
+
+
+/* LOGIN */
+
+
+.main__login{
+    margin: 0px 30px;
+}
+
+.login__descripcción{
+    font-family: var(--fuenteContenido);
+    text-align: center;
+    margin-top: -4rem;
+    margin-bottom: 20px;
+}
+    /* UserBlock */
+.userBlocks{
+    margin: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.userBlock{
+    align-content: center;
+    background-color: $primary-color;
+    border-radius: 10rem;
+    padding: 1rem;
+    width: 30rem;
+    padding-bottom: 2rem;
+}
+
+.userBlock__enlace{
+    border-radius: 10rem;
+    font-family: var(--fuenteTitulos);
+    color: var(--blanco);
+    padding: 1rem;
+    font-size: 2rem;
+    align-items: center;
+    margin: 10px 120px;
+}
+.userBlock:hover{
+    background-color: var(--Rojoclaro);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+}
+.userBlock__enlace:hover{
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+.recuadro__segundo{
+    margin: 60px 35px;
+}
+
+
+/* login usuarios */
+.formulario_login{
+    background-color: var(--VerdeOlivo);
+    border-radius: 10rem;
+    width: 35rem;
+    height: 19rem;
+    margin: 0px 35rem;
+    font-family: var(--fuenteContenido);
+    border: var(--Verde);
+}
+.campo__login {
+    display: flex;
+    margin: 2rem 2rem 0px 0px;
+}
+.campo__label__login {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding: 1.8rem 1.3rem;
+
+}
+.campo__field__login {
+    background-color: #a3bd95;
+    flex: 1;
+    border: 1px solid #a3bd95;
+}
+.campo__field__login--textarea {
+    height: 20rem;
+}
+.boton__login{
+    background-color: $navy-color;
+    border-radius: 10rem;
+    font-family: var(--fuenteTitulos);
+    color: var(--negro);
+    padding: 1rem;
+    font-size: 2rem;
+    margin-left: 10rem;
+}
+.boton__login:hover{
+    background-color: $turqueza;
+}
+.espacio{
+    text-align: center;
+    color: $terciary-color;
+}
+
+.recuadro__login{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* BUSQUEDA */
+.titulo__busqueda{
+    padding: 80px 80px 30px 80px;;
+    text-align: center;
+}
+    /* Filtros */
+    .menuFiltros{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        font-family: var(--fuenteContenido);
+    }
+    .menuFiltros__selecion{
+        border: $primary-color;
+        appearance: none;
+        padding: 0 30px 0 15px;
+        width: 50%;
+        color: var(--blanco);
+        background-color: $secondary-color;
+    }
+    .menuFiltros__caja .menuFiltros__icon{
+        width: 50px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .menuFiltros__icon{
+        background-color: $primary-color;
+        padding-top: 0.5rem;
+        padding-left: 1.2rem;
+    }
+    .menuFiltros__caja{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        min-width: 250px;
+        height: 50px;
+        
+        
+    }
+    .menuFiltros__busqueda{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* position: absolute;
+        left: 48%;
+        top: 45%;
+        padding: 10px; */
+    }
+    /* Busqueda */
+    input{
+        outline: none;
+        box-sizing: border-box;
+        height: 4rem;
+        width: 20rem;
+        margin-top: 0.5rem;
+        padding: 0 20px;
+        color: var(--negro);
+        border-radius: 10rem;
+        font-family: var(--fuenteContenido);
+        font-size: 20px;
+        border: 1px solid $navy-color;
+        background-color: $font-color;
+    }
+    ::placeholder{
+        color: $primary-color;
+    }
+    .btn_busqueda{
+        width: 5rem;
+        height: 5rem;
+        margin-left: -4.5rem;
+        background-color: $primary-color;
+        line-height: 5rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .imagen_busqueda{
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .busquedas{
+        justify-content: center;
+        margin: 0px 40px;
+    }
+
+    .contenedor__busquedas{
+        width: 60rem;
+        height: 15rem;
+        border-radius: 20px;
+        border: 1px solid $navy-color;
+        background-color: $font-color;
+        margin: 20px 20px;
+    }
 
 
 
