@@ -634,3 +634,7 @@ input {
   background-color: #94719F;
   margin: 20px 20px;
 }
+
+.cargo {
+  display: none;
+}

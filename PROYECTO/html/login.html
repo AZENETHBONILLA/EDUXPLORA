@@ -15,13 +15,13 @@
                     <a class="logo__texto">EduXplora</a>
                 </h1>
                 <ul>
-                    <li><a href="index.html"class="btn btn-cta">Regresar</a></li>
+                    <li><a href="index.html" class="btn btn-cta">Regresar</a></li>
                 </ul>
             </nav>
         </header>
     
         <div class="recuadro__login">
-            <form class="formulario_login">
+            <form class="formulario_login" id="miFormulario" onsubmit="enviarFormulario(event)">
                 <main class="main__login">
                     <h1 class="contacto__contenido">Login</h1>
                     <div class="contacto__contenido">
@@ -29,31 +29,33 @@
                     </div> <!-- nosotros contenido -->
                 </main>
                 <div class="campo__login">
-                    <h4 class="campo__label__login" for="nombre">Usuario</h4>
-                        <input 
-                            class="campo__field__login"
-                            type="text" 
-                            placeholder="Ingresa" 
-                            id="nombre"
-                        >
-                    </div>
-                    <div class="campo__login">
-                        <h4 class="campo__label__login" for="nombre">Contraseña</h4>
-                        <input 
-                            class="campo__field__login"
-                            type="text" 
-                            placeholder="Ingresa" 
-                            id="nombre"
-                        >
-                    </div>
-                    <div class="contenedor izquierda margen">
-                        <input type="submit" value="Enviar" class="btn btn-cta">
-                    </div>
-                </form>
+                    <h4 class="campo__label__login" for="usuario">Usuario</h4>
+                    <input 
+                        class="campo__field__login"
+                        type="text" 
+                        placeholder="Ingresa" 
+                        id="usuario"
+                        required
+                    >
+                </div>
+                <div class="campo__login">
+                    <h4 class="campo__label__login" for="password">Contraseña</h4>
+                    <input 
+                        class="campo__field__login"
+                        type="password" 
+                        placeholder="Ingresa" 
+                        id="password"
+                        required
+                    >
+                </div>
+                <div class="contenedor izquierda margen">
+                    <input type="submit" value="Enviar" class="btn btn-cta">
+                </div>
+            </form>
         </div>
-        
-    
     </div>
+
+    <script src="../scripts/login.js"></script>
 
 </body>
 </html>
