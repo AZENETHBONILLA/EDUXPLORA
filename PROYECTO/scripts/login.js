@@ -10,7 +10,7 @@ function enviarFormulario(event) {
         .then(response => response.json())
         .then(data => {
             if (data.error && data.error === "El usuario no existe") {
-                alert("ERROR: El usuario no existe");
+                alert("ERROR: Usuario Incorrecto");
             } else {
                 mostrarVentanaSegunRol(data);
             }
