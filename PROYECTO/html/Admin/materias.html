@@ -28,6 +28,45 @@
             <div class="titulo__busqueda">
                 <h1 class="Bus_titulo">Actualizar Materias y sus Objetivos</h1>
                 <p>¡Mantén tus datos académicos al día! Accede fácilmente para actualizar información sobre las materias y garantiza una gestión eficiente.</p>
+                
+                <div>
+                    <form class="formulario">
+                        <div class="campo">
+                            <h4 class="campo__label" for="Carrera">Carrera</h4>
+                            <input 
+                                class="campo__field"
+                                type="text" 
+                                placeholder="Carrera" 
+                                id="Carrera"
+                            >
+                        </div>
+                        <div class="campo">
+                            <h4 class="campo__label" for="Materia">Materia</h4>
+                            <input 
+                                class="campo__field"
+                                type="text" 
+                                placeholder="Materia" 
+                                id="Materia"
+                            >
+                        </div>
+                        <div class="campo">
+                            <h4 class="campo__label" for="Objetivo">Objetivo</h4>
+                            <textarea 
+                                class="campo__field campo__field--textarea"
+                                id="Objetivo"
+                            ></textarea>
+                        </div>
+            
+                        <div class="contenedor izquierda">
+                            <input type="button" value="Crear" class="btn btn-cta" onclick="registrarProducto()">
+                            <input type="button" value="Eliminar" class="btn btn-cta" onclick="registrarProducto()">
+                            <input type="button" value="Guardar" class="btn btn-cta" onclick="registrarProducto()">
+                        </div>
+                    </form>
+                </div>
+            
+            
+            
             </div>
 
         </div>
