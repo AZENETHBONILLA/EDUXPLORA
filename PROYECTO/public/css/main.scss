@@ -77,6 +77,20 @@ $unit: 8px;
     }
 }
 
+.btn-cta__cuarto{
+    width: 230px;
+    height: 60px;
+    align-items: center;
+    @include btn($navy-color, $terciary-color, 'true');
+    &:hover{
+        @include btn($turqueza, $terciary-color, 'true');
+        box-shadow: $box-shadow; 
+    }
+}
+
+
+
+
 *{
     @include reset-pm();
     box-sizing: border-box;
@@ -124,6 +138,15 @@ h4{
 }
 
 //Contenedores de pagina
+
+.container__busqueda{
+    background-color: white;
+    margin: 25px auto;
+    width: 1100px;
+    height: auto;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
 .container{
     background-color: white;
     margin: 40px auto;
@@ -134,6 +157,30 @@ h4{
 
     background-image: url("../../img/FONDO.png");
     background-size: 100% 100%;
+}
+
+.contenedor__busquedas{
+    background-color: white;
+    margin: 25px auto;
+    width: 1100px;
+    height: auto;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background-color: $turqueza;
+}
+
+.contenedor__respuesta{
+    background-color: $terciary-color;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.contenedor__bus{
+    background-color: $terciary-color;
+    border-radius: 30px;
+    width: 1100px;
+    height: auto;
+    margin: 25px auto;
 }
 
 .container__segundo{
@@ -221,7 +268,7 @@ h4{
     background-color: white;
     margin: 10px auto;
     width: 1100px;
-    height: 600px;
+    height: 250px;
     box-shadow: 0 0 20px 2px rgb(0, 0, 0, 0.1);
 
     background-image: url("../../img/BUSQUEDA.png");
@@ -353,6 +400,10 @@ header{
 
 .izquierda{
     justify-content: right;
+}
+
+.derecha{
+    margin: 0px 42rem;
 }
 
 .centro{
@@ -561,11 +612,13 @@ header{
     flex-direction: row;
 }
 
-
+.busquedas__contenido{
+    padding: 20px;
+}
 
 /* BUSQUEDA */
 .titulo__busqueda{
-    padding: 80px 80px 30px 80px;;
+    padding: 40px 80px 30px 80px;;
     text-align: center;
 }
     /* Filtros */
@@ -574,11 +627,12 @@ header{
         grid-template-columns: repeat(3, 1fr);
         font-family: var(--fuenteContenido);
     }
+
     .menuFiltros__selecion{
         border: $primary-color;
         appearance: none;
         padding: 0 30px 0 15px;
-        width: 50%;
+        width: 220px;
         color: var(--blanco);
         background-color: $secondary-color;
     }
@@ -598,9 +652,8 @@ header{
         justify-content: center;
         position: relative;
         min-width: 250px;
-        height: 50px;
-        
-        
+        height: 60px;
+           
     }
     .menuFiltros__busqueda{
         display: grid;
@@ -647,15 +700,18 @@ header{
 
     .busquedas{
         justify-content: center;
-        margin: 0px 40px;
+        margin: 10px 30px;
+    }
+
+    .texto .busquedas{
+        text-align: center;
     }
 
     .contenedor__busquedas{
-        width: 60rem;
-        height: 15rem;
+        width: auto;
+        height: auto;
         border-radius: 20px;
         border: 1px solid $navy-color;
-        background-color: $font-color;
         margin: 20px 20px;
     }
 
