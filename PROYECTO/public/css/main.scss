@@ -375,8 +375,8 @@ header{
 /*FOOTHER*/
 .footer{
     background-color: $secondary-color;
-    padding: 2.5rem 0;
-    margin-top: 4rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
     color: $terciary-color;
 }
 .footer__texto{
@@ -880,81 +880,6 @@ header{
       margin: auto 250px;
     }
   
-
-    
-
-  /* ventanas flotantes */
-  .ventana{
-    background-color: #55B4B0;
-    width: 80rem;
-    padding: 10px 20px;
-    margin: 20% auto;
-    position: relative;
-  }
-  .modal{
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: -250px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 1m;
-  }
-  #IrVentanaFlotante:target{
-    opacity: 1;
-    pointer-events: auto;
-  }
-  #IrVentanaFlotante2:target{
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .cierreventana{
-    text-align: right;
-    font-weight: bolder;
-  }
-    /* FOMULAVIO DE LA VENTANA */
-    .formularioV{
-      background-color: var(--blanco);
-      margin: -4rem auto 0 -5rem;
-      width: 100%;
-      padding: 6rem;
-      font-family: var(--fuenteContenido);
-    }
-    .campoV{
-      /* display: flex; */
-      margin-bottom: 15px;
-      margin-top: -2rem;
-      padding-right: 1rem;
-    }
-    .campoV__label{
-
-      flex: 0 0 9rem;
-      font-size: 1rem;
-      font-weight: bold;
-      text-align: left;
-      padding: 20px 2rem;
-      margin-top: 2px;
-    }
-    .campoV__field{
-      background-color: white;
-      height: 2rem;
-      width: 18rem;
-      font-size: 0.8rem;
-      flex: 1;
-      border: 1px solid var(--gris);
-      font-family: var(--fuenteContenido);
-    }
-    .campoV__field--textarea {
-      margin-top: 0.5rem;
-      height: 2rem;
-    }
-    .formularioV__frscampos{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-    }
 
 
 
