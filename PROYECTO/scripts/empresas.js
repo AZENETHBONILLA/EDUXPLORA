@@ -90,11 +90,11 @@ document.querySelector('.menuFiltros__busqueda .btn-cta').addEventListener('clic
 
         // Crear un div específico para el botón
         var divBoton = document.createElement('div');
-        divBoton.classList.add('busquedas__boton', 'derecha');
+        divBoton.classList.add('opcionvf','busquedas__boton', 'derecha');
 
         // Crear un enlace (<a>) con la clase y texto especificados
         var enlaceSolicitar = document.createElement('a');
-        enlaceSolicitar.href = 'login.html';  // Especifica la URL a la que debe dirigirse el enlace
+        enlaceSolicitar.href = '#IrVentanaFlotante2';  // Especifica la URL a la que debe dirigirse el enlace
         enlaceSolicitar.classList.add('btn', 'btn-cta__cuarto');
         enlaceSolicitar.textContent = 'SOLICITAR';
 
