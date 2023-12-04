@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materias</title>
-    <link rel="stylesheet" href="../../public/css/main.css">
-    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/main.css">>
 </head>
 <body class="body__usuarios">
     <div class="container__header">
@@ -24,60 +24,38 @@
         </header>
     </div>
 
-        <div class="container__admin">
-            <div class="titulo__busqueda">
-                <h1 class="Bus_titulo">Actualizar Materias y sus Objetivos</h1>
-                <p>¡Mantén tus datos académicos al día! Accede fácilmente para actualizar información sobre las materias y garantiza una gestión eficiente.</p>
-                
-                <div>
-                    <form class="formulario">
-                        <div class="campo">
-                            <h4 class="campo__label" for="Carrera">Carrera</h4>
-                            <input 
-                                class="campo__field"
-                                type="text" 
-                                placeholder="Carrera" 
-                                id="Carrera"
-                            >
-                        </div>
-                        <div class="campo">
-                            <h4 class="campo__label" for="Materia">Materia</h4>
-                            <input 
-                                class="campo__field"
-                                type="text" 
-                                placeholder="Materia" 
-                                id="Materia"
-                            >
-                        </div>
-                        <div class="campo">
-                            <h4 class="campo__label" for="Objetivo">Objetivo</h4>
-                            <textarea 
-                                class="campo__field campo__field--textarea"
-                                id="Objetivo"
-                            ></textarea>
-                        </div>
+    <div class="container__admin">
+        <div class="titulo__busqueda">
+            <h1 class="Bus_titulo">Actualizar Materias y sus Objetivos</h1>
+            <p>¡Mantén tus datos académicos al día! Accede fácilmente para actualizar información sobre las materias y garantiza una gestión eficiente.</p>
             
-                        <div class="contenedor izquierda">
-                            <input type="button" value="Crear" class="btn btn-cta" onclick="crearRegistro()"">
-                            <input type="button" value="Eliminar" class="btn btn-cta" onclick="eliminarRegistro()">
-                            <input type="button" value="Guardar" class="btn btn-cta" onclick="actualizarObj()">
-                        </div>
-                    </form>
-                </div>
-            
-            
-            
-            </div>
+    
+    <div class="contenedorform">
 
-        </div>
+        <div class="div-formulario">
+            
+
+            <form id="formulario">
+                <label class="etiqueta" for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label class="etiqueta" for="objetivo">Objetivo:</label>
+                <input type="text" id="objetivo" required>
+                <label class="etiqueta" for="idCarrera">IDCarrera:</label>
+                <input type="text" id="idCarrera" required>
+                <button class="boton__agregar" type="submit">Agregar</button>
+            </form>
+           
 
     </div>
+    </div>
+    </div>
+    <div class="div-materiasin"></div>
+</div>
 
+<script src="../../scripts/traermate.js"></script>
 
-    <script type="text/javascript" src="../../scripts/adminAgElCr.js"></script>
-    <footer class="footer">
-        <p class="footer__texto">EduXplora© -- todos los derechos reservados</p>
-    </footer>
-
+<footer class="footer">
+    <p class="footer__texto">EduXplora© -- todos los derechos reservados</p>
+</footer>
 </body>
 </html>

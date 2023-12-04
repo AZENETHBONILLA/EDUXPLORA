@@ -49,7 +49,7 @@ fetch('http://localhost/eduxplora/filtroc.php')
     })
     .catch(error => console.error('Error al obtener los datos de carreras:', error));
 
-// ... (tu código anterior)
+
 
 // Agregar un evento de clic al botón "Buscar"
 document.querySelector('.menuFiltros__busqueda .btn-cta').addEventListener('click', function () {
@@ -67,7 +67,7 @@ document.querySelector('.menuFiltros__busqueda .btn-cta').addEventListener('clic
             // Limpiar el contenido anterior del div
             infoMateriaDiv.innerHTML = '';
 
-            // Crear un único div contenedor__respuesta para todas las empresas
+    // Crear un único div contenedor__respuesta para todas las empresas
     var contenedorRespuestaDiv = document.createElement('div');
     contenedorRespuestaDiv.classList.add('contenedor__respuesta');
 
@@ -96,24 +96,22 @@ document.querySelector('.menuFiltros__busqueda .btn-cta').addEventListener('clic
         var enlaceSolicitar = document.createElement('a');
         enlaceSolicitar.href = '#IrVentanaFlotante2';  // Especifica la URL a la que debe dirigirse el enlace
         enlaceSolicitar.classList.add('btn', 'btn-cta__cuarto');
-        enlaceSolicitar.textContent = 'SOLICITAR';
+        enlaceSolicitar.textContent = 'RECOMENDAR';
 
         // Agregar el enlace al div específico para el botón
         divBoton.appendChild(enlaceSolicitar);
-
         // Agregar el div específico para el botón al div de información de la empresa
         empresaInfo.appendChild(divBoton);
-
         // Construir la estructura completa y agregarla al div principal
         contenedorBusquedasDiv.appendChild(empresaInfo);
         busquedasDiv.appendChild(contenedorBusquedasDiv);
         contenedorRespuestaDiv.appendChild(busquedasDiv);
+
+        
     });
 
     // Agregar el div contenedor__respuesta al div principal
     infoMateriaDiv.appendChild(contenedorRespuestaDiv);
-
-
         
     } else {
         console.error('La respuesta del servidor no tiene el formato esperado:', responseData);
@@ -121,4 +119,7 @@ document.querySelector('.menuFiltros__busqueda .btn-cta').addEventListener('clic
 })
 .catch(error => console.error('Error al obtener la información de la materia:', error));
 });
+
+
+
 

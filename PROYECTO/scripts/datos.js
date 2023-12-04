@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const urlObtenerUsuarios = 'http://localhost/explora/obtenerUsuarios.php';
+    const urlObtenerUsuarios = 'http://localhost/eduxplora/obtenerUsuarios.php';
   
     fetch(urlObtenerUsuarios)
       .then(response => {

@@ -1,5 +1,5 @@
-const urlObtenerUsuarios = 'http://localhost/explora/obtenerUsuarios.php';
-const urlActualizarEstado = 'http://localhost/explora/editarUsuario.php';
+const urlObtenerUsuarios = 'http://localhost/eduxplora/obtenerUsuarios.php';
+const urlActualizarEstado = 'http://localhost/eduxplora/editarUsuario.php';
 
 fetch(urlObtenerUsuarios)
   .then(response => {

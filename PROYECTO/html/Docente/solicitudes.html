@@ -35,20 +35,101 @@
                 <h3 class="bloque__titulo">Visita Guiada 1</h3>
                 <p class="bloque__contenido">Información:</p>
                 <div class="contenedor izquierda">
-                    
+                    <p> NOMBRE: 
+                        FECHA:
+                    </p>
+                <div class="opcionvf">
+                    <a href="#IrVentanaFlotante">
+                            <p class="btn btn-cta__tercero">Reseña de visita</p>
+                    </a>
+                </div>
+                <div id="IrVentanaFlotante" class="modal">
+                    <div class="ventana">
+                        <a href="#" style="text-decoration: none;">
+                          <p class="cierreventana">X</p>
+                        </a>
+                        <h2 class="titVentanaFlotante">Reseña de Visitas guiadas y/o Conferencias </h2>
+                        <form class="formularioV">
+                            <div class="formularioV__frscampos">
+                                <div class="campoV">
+                                    <h4 class="campoV__label" for="FechaDeViaje">1. Fecha actual:</h4>
+                                    <input 
+                                        class="campoV__field"
+                                        type="date"
+                                        id="fecha"
+                                        name="FechaDeViaje"
+                                    >
+                                </div>
+                                <div class="campoV">
+                                    <h4 class="campoV__label" for="actVis">2. Actividades realizadas en la visita</h4>
+                                    <textarea 
+                                        class="campoV__field campo__field--textarea"
+                                        id="actVis"
+                                    ></textarea>
+                                </div>
+                                <div class="campoV">
+                                    <h4 class="campoV__label" for="objetivos">3. Fueron alcanzados los objetivos de la visita</h4>
+                                    <input 
+                                        class="campoV__field"
+                                        placeholder="Elije tu respuesta" 
+                                        id="objetivos"
+                                        list="objetivosl">
+                                        <datalist id="objetivosl">
+                                            <option value="Si">
+                                            <option value="No">
+                                        </datalist>
+                                </div>
+                                <div class="campoV">
+                                    <h4 class="campoV__label" for="calificacion">4. En una escala del uno al 10 ¿Comó calficaría la visita?</h4>
+                                    <input class="campoV__field" type="number" id="calificacion" name="quantity" min="1" max="10">
+                                </div>
+                                <div class="campoV">
+                                    <h4 class="campoV__label" for="recomendacion">5. Recomendaria la visita</h4>
+                                    <input 
+                                        class="campoV__field"
+                                        placeholder="Elije tu respuesta" 
+                                        id="recomendacion"
+                                        list="respuesta">
+                                        <datalist id="respuesta">
+                                            <option value="Si">
+                                            <option value="No">
+                                        </datalist>
+                                </div>
+                                <div class="campoV">
+                                    <h4 class="campoV__label" for="pq">6. ¿Por que?</h4>
+                                    <textarea 
+                                        class="campoV__field campo__field--textarea"
+                                        id="pq"
+                                    ></textarea>
+                                </div>
+                                <div class="campoV">
+                                    <h4 class="campoV__label" for="obsysuj">7. Observaciones y sugerencias</h4>
+                                    <textarea 
+                                        class="campoV__field campo__field--textarea"
+                                        id="obsysuj"
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <div class="contenedorV izquierdaV">
+                                    <input type="submit" value="Aceptar y enviar" class="btn btn-cta__tercero" onclick="registrarResenia()">
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 </div>
             </div><!-- bloque  -->
+            
 
         </div><!-- bloques  -->
 
-
-
+        <script src="../../scripts/reseña.js"></script>
+        <script src="../../scripts/datos.js"></script>
 
     </div>
 
     <footer class="footer">
         <p class="footer__texto">EduXplora© -- todos los derechos reservados</p>
     </footer>
-    <script src="../../scripts/datos.js"></script>
+    
 </body>
 </html>
